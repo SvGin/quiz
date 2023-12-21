@@ -1,0 +1,83 @@
+/* --------- Global style */
+
+body {
+    background-color: white;
+    font-family: "Raleway", sans-serif;
+    color: #445361;
+    text-align: center;
+}
+
+/* Heading */
+
+.heading {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.game-area {
+    background-color: #59a5d7;
+    box-sizing: border-box;
+    width: 85%;
+    height: 65vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+.question-area {
+    width: 75%;
+    font-size: 2rem;
+    margin: auto;
+    padding: 0;
+}
+
+.question-area span {
+    padding: 0 15px;
+}
+
+
+.score-area {
+    margin: 5px auto;
+    width: 60%;
+    font-size: 1.2rem;
+}
+#correct {
+    color: green;
+    font-weight: bold;
+}
+
+#incorrect {
+    color: red;
+    font-weight: bold;
+}
+
+.answer-message {
+    display: none;
+    font-size: 1rem;
+}
+#answer-box {
+    border: none;
+    color: #445361;
+    display:inline ;
+    height: 40px;
+    width: 100px;
+    font-size: 1.2rem;
+}
+
+.scores {
+    display: inline-block;
+    padding: 25px;
+}
+
+#button {
+    margin-top: 25px;
+    background-color: #445361;
+    border: 1px transparent;
+    border-radius: 20px;
+}
+
+#button:active,
+#button:hover {
+    background-color: #0d1013;
+}
