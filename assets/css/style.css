@@ -1,18 +1,21 @@
-/* --------- Global style */
+/*Global style */
 
 body {
     background-color: white;
     font-family: "Raleway", sans-serif;
     color: #445361;
     text-align: center;
+
 }
 
 /* Heading */
 
 .heading {
     text-align: center;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
+
+/*game area*/
 
 .game-area {
     background-color: #59a5d7;
@@ -25,18 +28,40 @@ body {
     margin-right: auto;
     padding: 1%;
 }
-.question-area {
+#question-text {
     width: 75%;
     font-size: 2rem;
     margin: auto;
-    padding: 0;
+    padding-top: 20%;
 }
 
-.question-area span {
-    padding: 0 15px;
+.options {
+    padding-top: 10%;
 }
 
+.btn-option {
+    padding-top: 10px;
+    background-color: white;
+    border: 1px solid;
+    width: 150px;
+    height: 50px;
+    font-size: 2rem;
+    margin: 0 30px;      
+}
 
+.controls {
+    padding-top: 10px;
+}
+
+/*buttons under game area*/
+
+.btn:active,
+.btn:hover {
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+/*scores area*/
 .score-area {
     margin: 5px auto;
     width: 60%;
@@ -52,32 +77,11 @@ body {
     font-weight: bold;
 }
 
-.answer-message {
-    display: none;
-    font-size: 1rem;
-}
-#answer-box {
-    border: none;
-    color: #445361;
-    display:inline ;
-    height: 40px;
-    width: 100px;
-    font-size: 1.2rem;
-}
-
 .scores {
     display: inline-block;
     padding: 25px;
 }
 
-#button {
-    margin-top: 25px;
-    background-color: #445361;
-    border: 1px transparent;
-    border-radius: 20px;
-}
-
-#button:active,
-#button:hover {
-    background-color: #0d1013;
+.hide {
+    display: none;
 }

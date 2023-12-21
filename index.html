@@ -13,22 +13,27 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>General Knowledge Quiz</title>
 </head>
 <body>
     <h1 class="heading">
         <i class="fa-solid fa-brain"> General Knowledge Quiz </i>
     </h1>
 
-    <div class="game-area">
-        <div class="question-area">
-            <span class="questions"></span>
-                <p>What country has the highest life expectancy?</p>
-                <p>honkjb</p>
-            </span>
-            <input type="text" id="answer-box">
-        </div> 
-        <button id="button">Submit Answer</button>
+    <!--Game area question, true and false options, conroll buttons-->
+    <div class="game-area" id="content">
+        <div id="question-text">Question Text</div>
+        <div class="options">
+            <button class="btn btn-option" id="true">True</button>
+            <button class="btn btn-option" id="false">False</button>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="btn btn-restart" id="restart">Restart</button>
+        <button class="btn btn-prev" id="prev">Prev</button>
+        <button class="btn btn-next" id="next">Next</button>
+        <button class="btn btn-submit" id="submit">Submit</button>
     </div>
 
     <div class="score-area">
