@@ -25,14 +25,29 @@ function setNextQuestion() {
 
 let questionElem = document.getElementById('question-text');
 let answerBtnElem = document.getElementById('answer-options');
-
+let truBtn = document.getElementById('true');
+let falseBtn = document.getElementById('false');
 /**
- * Gets the question from variable questions
+ * Gets the question from variable questions, creates new button and removes the previouse 
  */
 function showQuestion(question) {
     questionElem.innerText = question.question;
+    question.answers.forEach(answer => {
+        let button = document.createElement('button');
+        button.innerText = answer.text;
+        button.classList.add('btn-option');
+        if (answer.corret){
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener('click', selectAnswer);
+        answerBtnElem.appendChild(button);
+    });
 
-};
+}
+
+function selectAnswer(e){
+
+}
 
 let questions = [
     {
