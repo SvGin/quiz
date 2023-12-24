@@ -68,7 +68,7 @@ body {
 }
 
 .hide {
-    background-image: url("assets/images/"|);
+    display: none;
 }
 
 /*scores area*/
@@ -91,4 +91,3 @@ body {
     display: inline-block;
     padding: 25px;
 }
-

@@ -1,58 +1,45 @@
-// Wait for the DOM to finish loading before running the game
-// Get the button elements and add event listeners to them
+let startButton = document.getElementById('start-btn');
+startButton.addEventListener('click', startQuiz);
 
-document.addEventListener("DOMContentLoaded", function() {
-    let buttons = document.getElementsByTagName("button");
+let questionAreaElement = document.getElementById('question-area');
 
-    for (let button of buttons) {
-        button.addEventListener("click", function() {
-            if (this.getAttribute("data-type") === "submit") {
-                alert("You clicked Submit!");
-            } else {
-                let gameType = this.getAttribute("data-type");
-                runGame(startQuiz);
-            }
-        });
-    }
-});
-let currentQestion = 0;
-let score = 0;
+let shuffled, currentQuestion;
 
+/**
+ * Starts the fame and displays questions after pressinf Start Button
+ */
+function startQuiz() {
+    startButton.classList.add('hide');
+    questionAreaElement.classList.remove('hide');
+    shuffled = questions.sort(() => Math.random()); //makes the chosen question random form the question list
+    currentQuestion = 0;
+    setNextQuestion();
+}
+
+/**
+ * Displays the question formt the created random question array 
+ */
+function setNextQuestion() {
+    showQuestion(shuffled[currentQuestion]);
+}
+
+let questionElem = document.getElementById('question-text');
+let answerBtnElem = document.getElementById('answer-options');
+
+/**
+ * Gets the question from variable questions
+ */
+function showQuestion(question) {
+    questionElem.innerText = question.question;
+
+};
 
 let questions = [
     {
-        question: 'What country has the highest life expectancy?',
+        question: 'In Home Alone, how many siblings does Kevin have?',
         answers: [
-            {option:"Hong Kong", answer:true},
-            {option:"London", answer:false}
+            {text: '4', correct: true},
+            {text: '7', correct: false}
         ]
-    },
-    {
-        question: 'Where would you be if you were standing on the Spanish Steps?',
-        answers: [
-            {option:"Rome", answer:true},
-            {option:"Madrid", answer:false}
-        ]  
-    },
-    {
-        question: 'Which language has the more native speakers: English or Spanish?',
-        answers: [
-            {option:"English", answer:false},
-            {option:"Spanish", answer:true}
-        ]    
     }
 ]
-
-let questionText = document.getElementById('question-text');
-let trueButton = document.getElementById('true');
-let falseButton = document.getElementById('false');
-
-function startQuiz(){
-    currentQestion = 0;
-    questionText.innerHTML = questions[currentQestion].question;
-    trueButton.innerHTML = questions[currentQestion].answers[0].option;
-    falseButton.innerHTML = questions[currentQestion].answers[1].option;
-    
-}
-
-beginQuiz();
