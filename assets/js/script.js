@@ -24,23 +24,23 @@ let questions = [
 
 let questionText = document.getElementById('question-text');
 let answerBtns = document.getElementById('answer-options');
-//let startButton = document.getElementById('start-btn');
+let startButton = document.getElementById('start-btn');
 let nextBtn = document.getElementById('next-btn');
 let questionArea = document.getElementById('question-area');
 
 let currentQuestionInd = 0;
 let score = 0;
 
-//startButton.addEventListener('click', beginQuiz);
+startButton.addEventListener('click', beginQuiz);
 
 
 function beginQuiz() {
-    //startButton.classList.add('hide');
+    startButton.classList.add('hide');
     //questionArea.classList.remove('hide');
-   // nextBtn.classList.remove('hide');
+    //nextBtn.classList.remove('hide');
     currentQuestionInd = 0;
     score = 0;
-    nextBtn.innerHTML = 'Next';
+    //nextBtn.innerHTML = 'Next';
     displayQuestion();
 }
 
@@ -55,6 +55,10 @@ function displayQuestion() {
         button.innerHTML = answer.text;
         button.classList.add('btn');
         answerBtns.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener('click', selectAnswer)
     });
 }
 
@@ -65,5 +69,32 @@ function resetState() {
     }
 }
 
+function selectAnswer(e) {
+    let selectedOption = e.target;
+    let isCorrect = selectedOption.dataset.correct === 'true';
+    if(isCorrect){
+        //selectedOption.classList.add('correct');
+        alert("Hey! You got it right! :D");
+        incrementScore();
+    } else {
+       // selectedOption.classList.add('incorrect');
+        alert(`The correct answer was ${isCorrect.innerText}!`);
+        incrementWrongAnswer();
+    }
+    nextBtn.style.display = 'block';
+}
+
 beginQuiz();
 
+function incrementScore() {
+
+    let oldScore = document.getElementById('correct').innerText;
+    document.getElementById('correct').innerText = ++oldScore;
+
+}
+
+function incrementWrongAnswer() {
+
+    let oldScore = document.getElementById('incorrect').innerText;
+    document.getElementById('incorrect').innerText = ++oldScore;
+}
