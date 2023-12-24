@@ -62,15 +62,15 @@ body {
     color: aliceblue;
 }
 
-#start-btn, #next-btn {
+#next-btn {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;
 }
 
-.hide {
+/*.hide {
     display: none;
-}
+}*/
 
 /*scores area*/
 .score-area {
