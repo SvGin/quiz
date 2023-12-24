@@ -39,7 +39,7 @@ body {
     padding-top: 10%;
 }
 
-.btn-option {
+.btn{
     padding-top: 10px;
     background-color: white;
     border: 1px solid;
@@ -48,6 +48,7 @@ body {
     font-size: 2rem;
     margin: 0 30px;      
 }
+
 
 .controls {
     padding-top: 10px;
