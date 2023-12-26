@@ -57,7 +57,7 @@ body {
 
 .btn:active,
 .btn:hover {
-    background-color: darkblue;
+    background-color: #06100F;
     color: aliceblue;
 }
 
