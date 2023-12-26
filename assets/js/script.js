@@ -22,6 +22,55 @@ let questions = [
             { text: '598', correct: false },
             { text: '364', correct: true }
         ]
+    },
+    {
+        question: 'In which country is it tradition to eat KFC for Christmas dinner?',
+        answers: [
+            { text: 'Cananda', correct: false },
+            { text: 'Japan', correct: true }
+        ]
+    },
+    {
+        question: 'Which country started the tradition of putting up a Christmas tree?',
+        answers: [
+            { text: 'Latvia', correct: false },
+            { text: 'Germany', correct: true }
+        ]
+    },
+    {
+        question: 'What time is the King’s speech traditionally broadcast on Christmas Day?',
+        answers: [
+            { text: '3pm', correct: true },
+            { text: '6am', correct: false }
+        ]
+    },
+    {
+        question: 'What is the Grinch\'s dog called?',
+        answers: [
+            { text: 'Bob', correct: false },
+            { text: 'Max', correct: true }
+        ]
+    },
+    {
+        question: 'What colour are mistletoe berries?',
+        answers: [
+            { text: 'White', correct: true },
+            { text: 'Red', correct: false }
+        ]
+    },
+    {
+        question: 'What colour suit did Santa wear until Coca Cola rebranded him in red?',
+        answers: [
+            { text: 'Orange', correct: false },
+            { text: 'Green', correct: true }
+        ]
+    },
+    {
+        question: 'What decoration do elves traditionally have on their shoes?',
+        answers: [
+            { text: 'Bells', correct: true },
+            { text: 'Ribbons', correct: false }
+        ]
     }
 ];
 
@@ -80,7 +129,7 @@ function selectAnswer(e) {
     
     } else {
         selectedOption.classList.add('incorrect');
-        alert(`The correct answer was ${isCorrect.innerText}!`);
+        alert(`Sorry, the answer is wrong!`);
     
     }
     nextBtn.style.display = 'block';
