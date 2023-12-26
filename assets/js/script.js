@@ -77,7 +77,6 @@ let score = 0;
 let questionText = document.getElementById('question-text');
 let answerBtns = document.getElementById('answer-options');
 let nextBtn = document.getElementById('next-btn');
-let questionArea = document.getElementById('question-area');
 let scoreArea = document.getElementById('area');
 
 /**
@@ -119,8 +118,8 @@ function displayQuestion() {
 function resetState() {
     nextBtn.style.display = 'none';
     while(answerBtns.firstChild) {
-        answerBtns.removeChild(answerBtns.firstChild)
-    };
+        answerBtns.removeChild(answerBtns.firstChild);
+    }
 }
 
 /**
@@ -137,7 +136,6 @@ function selectAnswer(e) {
     } else {
         selectedOption.classList.add('incorrect');
         alert(`Sorry, the answer is wrong!`);
-    
     }
     nextBtn.style.display = 'block';
 }
@@ -173,7 +171,6 @@ nextBtn.addEventListener('click', ()=> {
     } else {
         beginQuiz();
     }
-})
-
+});
 
 beginQuiz();
