@@ -1,6 +1,3 @@
-
-
-
 let questions = [
     {
         question: 'In Home Alone, how many siblings does Kevin have?',
@@ -83,15 +80,20 @@ let nextBtn = document.getElementById('next-btn');
 let questionArea = document.getElementById('question-area');
 let scoreArea = document.getElementById('area');
 
+/**
+ * This function starts the quiz
+ */
 function beginQuiz() {
-    
     currentQuestionInd = 0;
     score = 0;
-    scoreArea.classList.add('hide');
+    scoreArea.classList.add('hide'); //hides the final score
     nextBtn.innerHTML = 'Next';
     displayQuestion();
 }
 
+/**
+ * Function displays question with a nuber and possible answers; 
+ */
 function displayQuestion() {
     resetState();
     let currentQuestion = questions[currentQuestionInd];
@@ -111,7 +113,9 @@ function displayQuestion() {
     });
 }
 
-
+/**
+ * Resets the questions and answers. Replaces current with next one.
+ */
 function resetState() {
     nextBtn.style.display = 'none';
     while(answerBtns.firstChild) {
@@ -119,6 +123,9 @@ function resetState() {
     };
 }
 
+/**
+ * When answer selected will display alert message to show if the chousen aswer is correct 
+ */
 function selectAnswer(e) {
     let selectedOption = e.target;
     let isCorrect = selectedOption.dataset.correct === 'true';
@@ -135,6 +142,9 @@ function selectAnswer(e) {
     nextBtn.style.display = 'block';
 }
 
+/**
+ * will display next answer or the final score after completing last question
+ */
 function showScore() {
     resetState();
     questionText.innerHTML = `Thank you for playing`;
@@ -144,6 +154,9 @@ function showScore() {
     scoreArea.innerText = `Correct answers ${score} out of ${questions.length}!`;
 }
 
+/**
+ * Next button to appear after answer is selected or display final score after last question
+ */
 function handleNextButton(){
     currentQuestionInd++;
     if(currentQuestionInd < questions.length) {
