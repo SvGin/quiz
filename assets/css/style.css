@@ -86,4 +86,6 @@ body {
     padding: 1%;
 
 }
-
+.hide {
+    display: none;
+}

@@ -39,6 +39,7 @@ function beginQuiz() {
     
     currentQuestionInd = 0;
     score = 0;
+    scoreArea.classList.add('hide');
     nextBtn.innerHTML = 'Next';
     displayQuestion();
 }
@@ -90,6 +91,7 @@ function showScore() {
     questionText.innerHTML = `Thank you for playing`;
     nextBtn.innerHTML = 'Reset';
     nextBtn.style.display = 'block';
+    scoreArea.classList.remove('hide');
     scoreArea.innerText = `Correct answers ${score} out of ${questions.length}!`;
 }
 
