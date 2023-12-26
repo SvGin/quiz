@@ -1,24 +1,24 @@
 /*Global style */
 
 body {
-    background-color: white;
+    background-color: rgb(168, 141, 124);;
     font-family: "Raleway", sans-serif;
-    color: #445361;
+    color: black;
     text-align: center;
-
 }
 
 /* Heading */
 
 .heading {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-top: 9%;
 }
 
 /*game area*/
 
 .game-area {
-    background-color: #59a5d7;
     box-sizing: border-box;
     width: 85%;
     height: 65vh;
@@ -32,7 +32,7 @@ body {
     width: 75%;
     font-size: 2rem;
     margin: auto;
-    padding-top: 20%;
+    padding-top: 15%;
 }
 
 .options {
@@ -54,15 +54,13 @@ body {
     padding-top: 10px;
 }
 
-/*buttons under game area*/
-
 .btn:active,
 .btn:hover {
     background-color: darkblue;
     color: aliceblue;
 }
 
-.start-btn, .next-btn {
+.next-btn {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;

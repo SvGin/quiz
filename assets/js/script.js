@@ -34,7 +34,6 @@ let nextBtn = document.getElementById('next-btn');
 let questionArea = document.getElementById('question-area');
 let scoreArea = document.getElementById('area');
 
-
 function beginQuiz() {
     
     currentQuestionInd = 0;
@@ -62,6 +61,7 @@ function displayQuestion() {
         answerBtns.appendChild(button);
     });
 }
+
 
 function resetState() {
     nextBtn.style.display = 'none';
