@@ -1,3 +1,6 @@
+
+
+
 let questions = [
     {
         question: 'In Home Alone, how many siblings does Kevin have?',
@@ -22,22 +25,18 @@ let questions = [
     }
 ];
 
-let questionText = document.getElementById('question-text');
-let answerBtns = document.getElementById('answer-options');
-//let startButton = document.getElementById('start-btn');
-let nextBtn = document.getElementById('next-btn');
-let questionArea = document.getElementById('question-area');
-
 let currentQuestionInd = 0;
 let score = 0;
 
-//startButton.addEventListener('click', beginQuiz);
+let questionText = document.getElementById('question-text');
+let answerBtns = document.getElementById('answer-options');
+let nextBtn = document.getElementById('next-btn');
+let questionArea = document.getElementById('question-area');
+let scoreArea = document.getElementById('area');
 
 
 function beginQuiz() {
-    //startButton.classList.add('hide');
-    //questionArea.classList.remove('hide');
-    nextBtn.classList.remove('hide');
+    
     currentQuestionInd = 0;
     score = 0;
     nextBtn.innerHTML = 'Next';
@@ -67,7 +66,7 @@ function resetState() {
     nextBtn.style.display = 'none';
     while(answerBtns.firstChild) {
         answerBtns.removeChild(answerBtns.firstChild)
-    }
+    };
 }
 
 function selectAnswer(e) {
@@ -77,11 +76,11 @@ function selectAnswer(e) {
         selectedOption.classList.add('correct');
         alert("Hey! You got it right! :D");
         score++;
-        incrementScore();
+    
     } else {
         selectedOption.classList.add('incorrect');
         alert(`The correct answer was ${isCorrect.innerText}!`);
-        incrementWrongAnswer();
+    
     }
     nextBtn.style.display = 'block';
 }
@@ -91,6 +90,7 @@ function showScore() {
     questionText.innerHTML = `Thank you for playing`;
     nextBtn.innerHTML = 'Reset';
     nextBtn.style.display = 'block';
+    scoreArea.innerText = `Correct answers ${score} out of ${questions.length}!`;
 }
 
 function handleNextButton(){
@@ -107,22 +107,9 @@ nextBtn.addEventListener('click', ()=> {
     if(currentQuestionInd < questions.length){
         handleNextButton();
     } else {
-        beginQuiz()
+        beginQuiz();
     }
 })
 
+
 beginQuiz();
- 
-
-function incrementScore() {
-
-    let oldScore = document.getElementById('correct').innerText;
-    document.getElementById('correct').innerText = ++oldScore;
-
-}
-
-function incrementWrongAnswer() {
-
-    let oldScore = document.getElementById('incorrect').innerText;
-    document.getElementById('incorrect').innerText = ++oldScore;
-}

@@ -62,33 +62,28 @@ body {
     color: aliceblue;
 }
 
-#next-btn {
+.start-btn, .next-btn {
     font-size: 2rem;
     font-weight: bold;
     padding: 10px 20px;
 }
 
-/*.hide {
-    display: none;
-}*/
+.controls {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
 
-/*scores area*/
 .score-area {
-    margin: 5px auto;
-    width: 60%;
-    font-size: 1.2rem;
-}
-#correct {
-    color: green;
-    font-weight: bold;
+    background-color: #59a5d7;
+    box-sizing: border-box;
+    width: 85%;
+    height: 15vh;
+    max-height: 450px;
+    max-width: 830px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+
 }
 
-#incorrect {
-    color: red;
-    font-weight: bold;
-}
-
-.scores {
-    display: inline-block;
-    padding: 25px;
-}

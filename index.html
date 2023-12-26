@@ -22,25 +22,22 @@
 
     <!--Game area question, true and false options, conroll buttons-->
     <div class="game-area">
-        <div  id="question-area">
+        <div  id="question-area" class="hide">
             <div id="question-text">Question Text</div>
             <div class="options" id="answer-options">
                 <button class="btn btn-option" id="true">True</button>
                 <button class="btn btn-option" id="false">False</button>
             </div>
         </div>
+        <div class="controls">
+            <button class="btn" id="next-btn">Next</button>
+        </div>
     </div>
+    
 
-    <div class="controls">
-        <!--<button class="btn" id="start-btn">Start</button>-->
-        <button class="btn" id="next-btn">Next</button>
+    <div id="area" class="score-area hide">
         
-    </div>
-
-    <div class="score-area">
-        <p class="scores" >Correct Answer <span id="correct">0</span></p>
-        <p class="scores">Incorrect Answer <span id="incorrect">0</span></p>
-    </div>
+    </div> 
 
 
     <script src="assets/js/script.js"></script>
