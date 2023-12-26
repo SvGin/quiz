@@ -72,18 +72,6 @@ body {
     display: flex;
 }
 
-.score-area {
-    background-color: #59a5d7;
-    box-sizing: border-box;
-    width: 85%;
-    height: 15vh;
-    max-height: 450px;
-    max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-
-}
 .hide {
     display: none;
 }
